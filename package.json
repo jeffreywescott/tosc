@@ -1,0 +1,28 @@
+{
+  "name": "tosc",
+  "version": "0.1.0",
+  "description": "tokenized open source contributions",
+  "main": "lib/index.js",
+  "repository": "https://github.com/tosc/tosc.git",
+  "author": "Jeffrey Wescott <jeffrey.wescott@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"NO TESTS YET!\"",
+    "dev:functions:start": "./node_modules/.bin/functions start",
+    "dev:functions:stop": "./node_modules/.bin/functions stop",
+    "dev:testrpc": "./node_modules/.bin/testrpc",
+    "dev:start": "yarn dev:functions:start && yarn dev:testrpc",
+    "test": "./node_modules/.bin/blue-tape -r @std/esm \"tests/**/*.mjs\" | ./node_modules/.bin/tap-spec"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.27",
+    "blue-tape": "^1.0.0",
+    "ethereumjs-testrpc": "^6.0.3",
+    "tap-spec": "^4.1.1"
+  },
+  "dependencies": {
+    "@std/esm": "^0.17.3",
+    "solc": "^0.4.18",
+    "web3": "^1.0.0-beta.26"
+  }
+}
